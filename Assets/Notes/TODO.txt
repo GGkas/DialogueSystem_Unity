@@ -1,0 +1,2 @@
+1) #IMPORTANT: Most folders in hieararchy are to be changed (starred repo's design is too complicated)
+2) Will follow a YouTube tutorial on dialogue trees and start from there to build the manager.
