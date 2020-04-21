@@ -47,6 +47,13 @@ namespace DialogueTree
             // Add options to parent node
             srcNode.getOptions().Add(opt);
         }
+        
+        public static Dialogue LoadDialogue(string path)
+        {
+            //JSON OR XML, will have to choose
+
+            return dia;
+        }
     }
 }
 
