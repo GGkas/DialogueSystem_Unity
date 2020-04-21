@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Text;
+using System.Xml.Serialization;
+using System.IO;
+using System.Xml;
 
 namespace DialogueTree
 {
-    public class Dialogue : MonoBehaviour
-    {   
-        [SerializeField]
-        private List<DialogueNode> Nodes;
+    public class Dialogue
+    {
+        public List<DialogueNode> Nodes;
 
         public Dialogue()
         {
@@ -24,17 +26,17 @@ namespace DialogueTree
             // Give node and ID
             node.setID(Nodes.IndexOf(node));
         }
-        
+
         public void addOption(string text, DialogueNode srcNode, DialogueNode destNode)
         {
             // add dest node to dialogue if not there
             if (!Nodes.Contains(destNode)) { addNode(destNode); }
 
             // add source node to dialogue if not there
-            if (!Nodes.Contains(srcNode)) { addNode(srcNode);  }
+            if (!Nodes.Contains(srcNode)) { addNode(srcNode); }
 
             DialogueOptions opt;
-            
+
             // If dest is exit node, set ID to -1
             if (destNode == null)
             {
@@ -47,13 +49,15 @@ namespace DialogueTree
             // Add options to parent node
             srcNode.getOptions().Add(opt);
         }
-        
+
         public static Dialogue LoadDialogue(string path)
         {
-            //JSON OR XML, will have to choose
+            // XML files loading.
+            XmlSerializer serz = new XmlSerializer(typeof(Dialogue));
+            StreamReader reader = new StreamReader(path);
 
+            Dialogue dia = (Dialogue)serz.Deserialize(reader);
             return dia;
         }
     }
 }
-

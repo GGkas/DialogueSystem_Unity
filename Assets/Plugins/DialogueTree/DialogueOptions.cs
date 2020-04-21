@@ -1,20 +1,18 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Text;
 
 namespace DialogueTree
 {
-    public class DialogueOptions : MonoBehaviour
+    public class DialogueOptions
     {
-        [SerializeField]
         private int DestNodeID;
 
-        [SerializeField]
         private string Text; // could also be list/dict of strings
-        
-        public DialogueOptions() {}
 
-        public DialogueOptions(string text, int destID) 
+        public DialogueOptions() { }
+
+        public DialogueOptions(string text, int destID)
         {
             this.Text = text;
             this.DestNodeID = destID;

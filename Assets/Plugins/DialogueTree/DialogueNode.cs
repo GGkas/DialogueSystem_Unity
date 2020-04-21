@@ -1,18 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Text;
 
 namespace DialogueTree
 {
-    public class DialogueNode : MonoBehaviour
+    public class DialogueNode
     {
-        [SerializeField]
         private string Text;
-
-        [SerializeField]
         private int NodeID;
-
-        [SerializeField]
         private List<DialogueOptions> Options;
 
         public DialogueNode() { }
