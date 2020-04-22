@@ -4,7 +4,7 @@ using UnityEngine;
 
 using UnityEngine.UI;
 
-using DialogueTree;
+using DLLDialogueTree;
 
 public class NPCDialogueController : MonoBehaviour
 {
@@ -29,7 +29,7 @@ public class NPCDialogueController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dia = Dialogue.LoadDialogue(DialogueFilePath);
+        dia = Dialogue.loadDialogue(DialogueFilePath);
 
         var canvas = GameObject.Find("Canvas");
 
@@ -81,7 +81,7 @@ public class NPCDialogueController : MonoBehaviour
             /* NOTE: I really don't like how the Nodes attribute is public, but if I edit it, I would 
              * have to re-build the library. I will try it tomorrow, and hope it doesn't destroy
              * any references. */
-            DisplayNode(dia.Nodes[node_ID]);
+            DisplayNode(dia.getDialogueNodes()[node_ID]);
 
             selected_option = -2;
             while (selected_option == -2)
