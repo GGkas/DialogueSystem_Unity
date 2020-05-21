@@ -190,7 +190,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 34344849}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1168100928}
+        m_MethodName: DismissDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &34344849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,6 +470,7 @@ GameObject:
   - component: {fileID: 1168100926}
   - component: {fileID: 1168100925}
   - component: {fileID: 1168100924}
+  - component: {fileID: 1168100928}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -546,6 +558,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1168100928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168100923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e003f591ee671524b8d48c02a10dd667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCanvasGroup: {fileID: 2015918043}
+  dialogueText: {fileID: 1744193477}
+  dialogueTitle: {fileID: 1213349941}
 --- !u!1 &1213349939
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +972,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25.1
+  m_fontSize: 24.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1101,6 +1128,7 @@ GameObject:
   - component: {fileID: 2015918040}
   - component: {fileID: 2015918042}
   - component: {fileID: 2015918041}
+  - component: {fileID: 2015918043}
   m_Layer: 5
   m_Name: BG_Panel
   m_TagString: Untagged
@@ -1165,3 +1193,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015918039}
   m_CullTransparentMesh: 0
+--- !u!225 &2015918043
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015918039}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
