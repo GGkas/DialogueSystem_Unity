@@ -17,7 +17,14 @@ public class Game : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !DialogueScript.showingDialogue)
         {
-            DialogueScript.PopUpDialogue("START", "Welcome to the introductory dialogue!");
+            DialogueScript.PopUpDialogue("START", "Welcome to the introductory dialogue!", TurnRed);
         }
+    }
+
+    // This could be a callback to some special effect on the text or to get to the next
+    // conversation block (after implementing JSON)
+    void TurnRed()
+    {
+        gameObject.GetComponent<Renderer>().material.color = Color.red;
     }
 }
