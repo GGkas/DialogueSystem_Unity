@@ -13,19 +13,24 @@ public class DialogueScript : MonoBehaviour
     public TMP_Text dialogueText;
     public TMP_Text dialogueTitle;
 
+    public static bool showingDialogue;
+
     public static DialogueScript instance; // singleton
 
-    public static void PopUpDialogue(TMP_Text _title, TMP_Text _text)
+    public static void PopUpDialogue(string _title, string _text)
     {
-        instance.dialogueText = _text;
-        instance.dialogueTitle = _title;
-        instance.dialogueCanvasGroup.DOFade(1, 0.5f);
+        if (showingDialogue) return;
 
+        instance.dialogueText.SetText(_text);
+        instance.dialogueTitle.SetText(_title);
+        instance.dialogueCanvasGroup.DOFade(1, 0.5f);
+        showingDialogue = true;
     }
 
     public void DismissDialogue()
     {
         instance.dialogueCanvasGroup.DOFade(0, 0.5f).OnComplete(instance.hideCanvasGroup);
+        showingDialogue = false;
     }
 
     public void hideCanvasGroup()
