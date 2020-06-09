@@ -15,7 +15,8 @@ public class DialogueScript : MonoBehaviour
 
     public CanvasGroup dialogueCanvasGroup;
     //this could be replaced by a json filename, which we will load and then parse
-    //public string JSONFilePath;
+    public string JSONFilePath;
+    
     public GameObject okDialogueObject;
     public GameObject yesNoDialogueObject;
 
@@ -78,7 +79,7 @@ public class DialogueScript : MonoBehaviour
         else
         {
             noAnswer?.Invoke();
-        }        
+        }      
     }
 
     public void hideCanvasGroup()
@@ -90,6 +91,7 @@ public class DialogueScript : MonoBehaviour
     void Start()
     {
         instance = this;
+        instance.JSONFilePath = Application.dataPath + "/Dialogue_System/Misc/dialogue_tree.json";
     }
 
     // Update is called once per frame

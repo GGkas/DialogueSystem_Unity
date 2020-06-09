@@ -1,0 +1,50 @@
+{
+  "DialogueObjects": [
+    {
+      
+      "dialogueID": 1,
+      "dialogueParentNodeID": null,
+      "dialogueType": "YES_NO",
+      "dialogueTitle": "JOURNEY START",
+      "dialogueText": "Greetings traveler. Do you remember your name?",
+      "dialogueLeftNodeID": 2,
+      "dialogueRightNodeID": 3
+    },
+    {
+      "dialogueID": 2,
+      "dialogueParentNodeID": [ 1 ],
+      "dialogueType": "YES_NO",
+      "dialogueTitle": "JOURNEY START",
+      "dialogueText": "Excellent! Then let me introduce myself... My name is [NPC_NAME]. Do you want me to tell you your fate?",
+      "dialogueLeftNodeID": 4,
+      "dialogueRightNodeID": 5
+    },
+    {
+      "dialogueID": 3,
+      "dialogueParentNodeID": [ 1 ],
+      "dialogueType": "YES_NO",
+      "dialogueTitle": "JOURNEY START",
+      "dialogueText": "Hmmm, that's mildly inconvenient, but let me get straight to the point. Do you want me to tell you your fate?",
+      "dialogueLeftNodeID": 4,
+      "dialogueRightNodeID": 5
+    },
+    {
+      "dialogueID": 4,
+      "dialogueParentNodeID": [ 2, 3 ],
+      "dialogueType": "OK",
+      "dialogueTitle": "JOURNEY START",
+      "dialogueText": "Then sit down, and pay close attention. This might be history's turning point...",
+      "dialogueLeftNodeID": null,
+      "dialogueRightNodeID": null
+    },
+    {
+      "dialogueID": 5,
+      "dialogueParentNodeID": [ 2, 3 ],
+      "dialogueType": "OK",
+      "dialogueTitle": "JOURNEY START",
+      "dialogueText": "Well, too bad... If you're not here for my services, get out of my store!",
+      "dialogueLeftNodeID": null,
+      "dialougeRightNodeID":  null
+    }
+  ]
+}
