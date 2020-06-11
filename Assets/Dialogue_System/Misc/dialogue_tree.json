@@ -1,9 +1,8 @@
 {
-  "DialogueCells": [
+  "dialogueCells": [
     {
-      
       "dialogueID": 1,
-      "dialogueParentNodeID": null,
+      "dialogueParentNodeID": -1,
       "dialogueType": "YES_NO",
       "dialogueTitle": "JOURNEY START",
       "dialogueText": "Greetings traveler. Do you remember your name?",
@@ -34,8 +33,8 @@
       "dialogueType": "OK",
       "dialogueTitle": "JOURNEY START",
       "dialogueText": "Then sit down, and pay close attention. This might be history's turning point...",
-      "dialogueLeftNodeID": null,
-      "dialogueRightNodeID": null
+      "dialogueLeftNodeID": -1,
+      "dialogueRightNodeID": -1
     },
     {
       "dialogueID": 5,
@@ -43,8 +42,8 @@
       "dialogueType": "OK",
       "dialogueTitle": "JOURNEY START",
       "dialogueText": "Well, too bad... If you're not here for my services, get out of my store!",
-      "dialogueLeftNodeID": null,
-      "dialougeRightNodeID":  null
+      "dialogueLeftNodeID": -1,
+      "dialougeRightNodeID":  -1
     }
   ]
 }

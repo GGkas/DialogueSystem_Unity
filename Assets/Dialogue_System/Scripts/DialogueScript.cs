@@ -14,8 +14,6 @@ public class DialogueScript : MonoBehaviour
     };
 
     public CanvasGroup dialogueCanvasGroup;
-    //this could be replaced by a json filename, which we will load and then parse
-    public string JSONFilePath;
     
     public GameObject okDialogueObject;
     public GameObject yesNoDialogueObject;
@@ -48,10 +46,14 @@ public class DialogueScript : MonoBehaviour
             case DialogueType.OKDialogue:
                 instance.okDialogueObject.SetActive(true);
                 instance.yesNoDialogueObject.SetActive(false);
+                //instance.dialogueText = instance.okDialogueObject.GetComponent("DialoguePanel").GetComponentInChildren(typeof(TMP_Text)) as TMP_Text;
+                //instance.dialogueTitle = instance.okDialogueObject.GetComponent("DialoguePanel_Title").GetComponentInChildren(typeof(TMP_Text)) as TMP_Text;
                 break;
             case DialogueType.YesNoDialogue:
                 instance.okDialogueObject.SetActive(false);
                 instance.yesNoDialogueObject.SetActive(true);
+                //instance.dialogueText = instance.yesNoDialogueObject.GetComponent("DialoguePanel").GetComponentInChildren(typeof(TMP_Text)) as TMP_Text;
+                //instance.dialogueTitle = instance.yesNoDialogueObject.GetComponent("DialoguePanel_Title").GetComponentInChildren(typeof(TMP_Text)) as TMP_Text;
                 break;
         }
 
@@ -91,7 +93,6 @@ public class DialogueScript : MonoBehaviour
     void Start()
     {
         instance = this;
-        instance.JSONFilePath = Application.dataPath + "/Dialogue_System/Misc/dialogue_tree.json";
     }
 
     // Update is called once per frame
