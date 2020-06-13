@@ -18,7 +18,7 @@ public class Game : MonoBehaviour
             string json = stream.ReadToEnd();
             dialogueCollection = JsonUtility.FromJson<DialogueCells>(json);
         }
-        Debug.Log(JsonUtility.ToJson(dialogueCollection));
+        //Debug.Log(JsonUtility.ToJson(dialogueCollection)); // used for debugging purposes
     }
 
     // Update is called once per frame

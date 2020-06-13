@@ -46,14 +46,14 @@ public class DialogueScript : MonoBehaviour
             case DialogueType.OKDialogue:
                 instance.okDialogueObject.SetActive(true);
                 instance.yesNoDialogueObject.SetActive(false);
-                //instance.dialogueText = instance.okDialogueObject.GetComponent("DialoguePanel").GetComponentInChildren(typeof(TMP_Text)) as TMP_Text;
-                //instance.dialogueTitle = instance.okDialogueObject.GetComponent("DialoguePanel_Title").GetComponentInChildren(typeof(TMP_Text)) as TMP_Text;
+                instance.dialogueText = instance.okDialogueObject.GetComponentsInChildren<TMP_Text>()[0];
+                instance.dialogueTitle = instance.okDialogueObject.GetComponentsInChildren<TMP_Text>()[1];
                 break;
             case DialogueType.YesNoDialogue:
                 instance.okDialogueObject.SetActive(false);
                 instance.yesNoDialogueObject.SetActive(true);
-                //instance.dialogueText = instance.yesNoDialogueObject.GetComponent("DialoguePanel").GetComponentInChildren(typeof(TMP_Text)) as TMP_Text;
-                //instance.dialogueTitle = instance.yesNoDialogueObject.GetComponent("DialoguePanel_Title").GetComponentInChildren(typeof(TMP_Text)) as TMP_Text;
+                instance.dialogueText = instance.yesNoDialogueObject.GetComponentsInChildren<TMP_Text>()[0];
+                instance.dialogueTitle = instance.yesNoDialogueObject.GetComponentsInChildren<TMP_Text>()[1];
                 break;
         }
 
